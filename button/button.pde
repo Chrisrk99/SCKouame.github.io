@@ -17,8 +17,9 @@ color b9=  color(255,255,255);
 
 void setup()
 {
-size (800,1200);
+size (800,1000);
 
+background(200,200,200);
 f1 = loadImage("new1.png");
 f2 = loadImage("new2.png");
 f3 = loadImage("new3.png");
@@ -28,16 +29,22 @@ close =loadImage("newclose.png");
 open =loadImage("newopen.png");
 
 
-String s = "EMERGENCY BUTTON";
+String em = "EMERGENCY BUTTON";
 fill(0);
 textSize(25);
-text(s, 290, 700, 280, 320);
+text(em, 290, 700, 280, 320);
+
+
+
+
+
 
 }
 
 
 void draw() {
-  
+
+
   //BUTTON FOR FLOOR 5 DESIGN AND POSITIONNING
   fill(0);
   rect(250,31.5, 160,78,20);
@@ -143,6 +150,7 @@ void draw() {
   if( dist (280,600, mouseX, mouseY) <50)
   {
   fill(color(200,200,200));
+  
   }
   else
   {
@@ -153,9 +161,16 @@ void draw() {
  
   // OPEN BUTTON
   
-  image(open, 138, 572, 100,60);
+
+image(open, 138, 572, 100,60);
   strokeWeight(6);
   ellipse(280, 600, 80, 80);
+  
+  String op = "OPEN";
+  fill(0);
+  textSize(25);
+  text(op, 250, 585, 280, 320);
+  
   
   
   fill (b7);
@@ -174,6 +189,10 @@ void draw() {
   strokeWeight(6);
   ellipse(535, 600, 80, 80);
   image(close, 580, 572, 100,60);
+   String cl = "CLOSE";
+  fill(0);
+  textSize(25);
+  text(cl, 500, 585, 280, 320);
   
   
     fill (b8);
@@ -186,6 +205,8 @@ void draw() {
   {
     fill(b8);
   }
+ 
+ 
   strokeWeight(6);
   ellipse(535, 780, 80, 80);
   
@@ -199,8 +220,13 @@ void draw() {
   {
     fill(b9);
   }
+  stroke(0);
+  
   strokeWeight(6);
+  stroke(255,0,0);
   ellipse(280, 780, 80, 80);
+   
+  stroke(0);
   
   //button floor function
   
@@ -300,40 +326,34 @@ void mouseClicked() {
     }
   }
   
+}
+
+// Open door button function
+ void mouseReleased()
+ { 
+  
   if (b6 == color(255,255,255))
   {
     if(dist(280, 600, mouseX, mouseY) <50)
     {
     b6 = color(255,255,0);
-    print("opening \n ");
+    print("opening door... \n");
+    delay(2000);
+    b6=color(255,255,255);
+    print("Door is open! \n");
     }
   } 
-  else 
-  {
-    if (dist(280, 600, mouseX, mouseY) <50)
-    {
-    b6 = color(255,255,255);
-    
-    print("door is open \n");
-    }
-  }
+  
   
    if (b7 == color(255,255,255))
   {
     if(dist(535, 600, mouseX, mouseY) <50)
     {
     b7 = color(255,255,0);
-    print("closing \n");
+    print("closing door... \n");
+    delay(2000);
+    b7=color(255,255,255);
+    print("Door is close! \n");
     }
   } 
-  else 
-  {
-    if (dist(535, 600, mouseX, mouseY) <50)
-    {
-    b7 = color(255,255,255);
-    
-    print("door is closed \n");
-    }
-  }
-  
 }
