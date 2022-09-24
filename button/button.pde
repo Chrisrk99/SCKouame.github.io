@@ -2,7 +2,7 @@
 // the value of the rectangle after
 // after the mouse has been clicked
 
-PImage f1,f2,f3,f4,f5,close,open;
+PImage f1,f2,f3,f4,f5,close,open,alarm;
 //int floor1,floor2,floor3;
 color b1 = color(255,255,255);
 color b2=  color(255,255,255);
@@ -27,6 +27,7 @@ f4 = loadImage("new4.png");
 f5 = loadImage("new5.png");
 close =loadImage("newclose.png");
 open =loadImage("newopen.png");
+alarm= loadImage("alarm.png");
 
 
 String em = "EMERGENCY BUTTON";
@@ -78,6 +79,13 @@ void draw() {
   rect(528,561, 160,78,20);
   
   
+  //AlARM
+  fill(255,0,0);
+  stroke(255,0,0);
+  rect(130,741, 160,78,20);
+  
+  
+  stroke(0);
   
   
   //floor button
@@ -222,6 +230,7 @@ image(open, 138, 572, 100,60);
   }
   stroke(0);
   
+ image(alarm, 139, 750, 100,60);
   strokeWeight(6);
   stroke(255,0,0);
   ellipse(280, 780, 80, 80);
