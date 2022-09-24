@@ -2,7 +2,7 @@
 // the value of the rectangle after
 // after the mouse has been clicked
 
-PImage f1,f2,f3,f4,f5,close,open,alarm;
+PImage f1,f2,f3,f4,f5,close,open,alarm,call;
 //int floor1,floor2,floor3;
 color b1 = color(255,255,255);
 color b2=  color(255,255,255);
@@ -13,6 +13,7 @@ color b6=  color(255,255,255);
 color b7 = color(255,255,255);
 color b8=  color(255,255,255);
 color b9=  color(255,255,255);
+color b10=  color(255,255,255);
 
 
 void setup()
@@ -28,6 +29,7 @@ f5 = loadImage("new5.png");
 close =loadImage("newclose.png");
 open =loadImage("newopen.png");
 alarm= loadImage("alarm.png");
+call= loadImage("call.png");
 
 
 String em = "EMERGENCY BUTTON";
@@ -84,6 +86,11 @@ void draw() {
   stroke(255,0,0);
   rect(130,741, 160,78,20);
   
+  
+  //CALL  
+  fill(255,0,0);
+  stroke(255,0,0);
+  rect(515,741, 160,78,20);
   
   stroke(0);
   
@@ -197,7 +204,7 @@ image(open, 138, 572, 100,60);
   strokeWeight(6);
   ellipse(535, 600, 80, 80);
   image(close, 580, 572, 100,60);
-   String cl = "CLOSE";
+  String cl = "CLOSE";
   fill(0);
   textSize(25);
   text(cl, 500, 585, 280, 320);
@@ -215,8 +222,32 @@ image(open, 138, 572, 100,60);
   }
  
  
+ //call picture
+  image(call, 575, 750, 100,60);
   strokeWeight(6);
+  stroke(255,0,0);
   ellipse(535, 780, 80, 80);
+  String tel = "CALL";
+  fill(255,0,0);
+  textSize(25);
+  text(tel, 510, 762, 100, 100);
+  fill(255,0,0);
+  fill(b8);
+  
+  strokeWeight(2);
+  fill(b10);
+  ellipse(535, 900, 80, 80);
+  String POI = "FLASH RED WHEN \n CALL IS RECEIVED";
+  textSize(12);
+  fill(255,0,0);
+  text(POI, 580, 882, 100, 100);
+  
+  
+  
+ 
+  
+  
+  
   
   fill (b9);
   
@@ -230,12 +261,24 @@ image(open, 138, 572, 100,60);
   }
   stroke(0);
   
- image(alarm, 139, 750, 100,60);
+  
+  //alarm picture
   strokeWeight(6);
   stroke(255,0,0);
   ellipse(280, 780, 80, 80);
-   
+  image(alarm, 139, 750, 100,60);
+  String al = "ALARM";
+  fill(255,0,0);
+  textSize(25);
+  text(al, 245, 762, 280, 320);
+  fill(255,0,0);
+  fill(b9);
+
+ 
+ 
   stroke(0);
+  
+  
   
   //button floor function
   
@@ -332,6 +375,46 @@ void mouseClicked() {
     b5 = color(255,255,255);
     
     print("You are on the 1st floor \n");
+    }
+  }
+  
+  
+   if (b8 == color(255,255,255))
+  {
+    if( dist (535,760, mouseX, mouseY) <50)
+    {
+    b8 = color(255,255,0);
+    b10 = color(255,0,0);
+    }
+  } 
+  else 
+  {
+    if( dist (535,760, mouseX, mouseY) <50)
+    {
+     b8 = color(255,255,255);
+    b10 = color(255,255,255);
+    
+    }
+  }
+  
+  
+  
+  
+   if (b9 == color(255,255,255))
+  {
+    if( dist (280,760, mouseX, mouseY) <50)
+    {
+    b9 = color(255,255,0);
+    print("ALARM IS ON !!! STAY SAFE, FIREFIGHTER ARE COMING \n");
+    }
+  } 
+  else 
+  {
+    if( dist (280,760, mouseX, mouseY) <50)
+    {
+    b9 = color(255,255,255);
+    
+    print("Alarm off");
     }
   }
   
