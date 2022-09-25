@@ -22,15 +22,15 @@ size (800,1000);
 background(100,100,100);
 
 //Loading image into variable
-f1 = loadImage("new1.png");
-f2 = loadImage("new2.png");
-f3 = loadImage("new3.png");
-f4 = loadImage("new4.png");
-f5 = loadImage("new5.png");
-close =loadImage("newclose.png");
-open =loadImage("newopen.png");
-alarm= loadImage("alarm.png");
-call= loadImage("call.png");
+f1 = loadImage("img/new1.png");
+f2 = loadImage("img/new2.png");
+f3 = loadImage("img/new3.png");
+f4 = loadImage("img/new4.png");
+f5 = loadImage("img/new5.png");
+close =loadImage("img/newclose.png");
+open =loadImage("img/newopen.png");
+alarm= loadImage("img/alarm.png");
+call= loadImage("img/call.png");
 
 
 // creating a string for the emergency buttoon
