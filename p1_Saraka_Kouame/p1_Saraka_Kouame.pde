@@ -1,3 +1,5 @@
+// AUTHOR: SARAKA CHRIS KOUAME
+
 //Declaring variable for all the image
 
 PImage f1,f2,f3,f4,f5,close,open,alarm,call;
@@ -20,6 +22,7 @@ void setup()
  //Setting the background size and color
 size (800,1000);
 background(100,100,100);
+
 
 //Loading image into variable
 f1 = loadImage("img/new1.png");
@@ -373,7 +376,7 @@ void mouseClicked() {
     }
   }
   
-  //CLOSE BUTTON FUNCTION
+  //CALL BUTTON FUNCTION
    if (b8 == color(255,255,255))
   {
     if( dist (535,760, mouseX, mouseY) <50)
