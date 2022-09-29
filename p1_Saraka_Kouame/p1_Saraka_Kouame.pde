@@ -38,12 +38,6 @@ String em = "EMERGENCY BUTTON";
 fill(0);
 textSize(25);
 text(em, 290, 700, 280, 320);
-
-
-
-
-
-
 }
 
 
@@ -101,7 +95,7 @@ void draw() {
   
   //FEEDBACK WHEN HOVER OVER THE BUTTON 
   fill (b1);
-  if( dist (400,70, mouseX, mouseY) <50)
+  if( dist (450,70, mouseX, mouseY) <50)
   {
   //BUTTON TURN GREY
   fill(color(200,200,200)); 
@@ -117,7 +111,7 @@ void draw() {
   
   //BUTTON 2 HOVER FEEDBACK
   fill (b2);
-  if( dist (400,170, mouseX, mouseY) <50)
+  if( dist (450,170, mouseX, mouseY) <50)
   {
   fill(color(200,200,200));
   }
@@ -131,7 +125,7 @@ void draw() {
   
   //BUTTON 3 HOVER FEEDBACK
   fill (b3);
-  if( dist (400,270, mouseX, mouseY) <50)
+  if( dist (450,270, mouseX, mouseY) <50)
   {
   fill(color(200,200,200));
   }
@@ -144,7 +138,7 @@ void draw() {
   
   //BUTTON 4 HOVER FEEDBACK
   fill (b4);
-  if( dist (400,370, mouseX, mouseY) <50)
+  if( dist (450,370, mouseX, mouseY) <50)
   {
   fill(color(200,200,200));
   }
@@ -157,7 +151,7 @@ void draw() {
   
   //BUTTON 5 HOVER FEEDBACK
   fill (b5);
-  if( dist (400,470, mouseX, mouseY) <50)
+  if( dist (450,470, mouseX, mouseY) <50)
   {
   fill(color(200,200,200));
   }
@@ -292,7 +286,7 @@ void mouseClicked() {
   //FLOOR 1 BUTTON FUNCTION
   if (b1 == color(255,255,255))
   {
-    if(dist(400, 70, mouseX, mouseY) <50)
+    if(dist(450, 70, mouseX, mouseY) <50)
     {
       b1 = color(255,255,0);// WHEN CLICKED SET BUTTON TO YELLOW
       print("Going to the 5th floor \n"); //DISPLAY WHEN BUTTON CLICKED
@@ -301,7 +295,7 @@ void mouseClicked() {
   
   else 
   {
-    if (dist(400, 70, mouseX, mouseY) <50)
+    if (dist(450, 70, mouseX, mouseY) <50)
     
     print("You are on the 5th floor \n"); //DISPLAY WHEN BUTTON IS CLICKED
     b1 = color(255,255,255); //SET BUTTON BACK TO WHITE 
@@ -310,7 +304,7 @@ void mouseClicked() {
   //FLOOR 2 BUTTON FUNCTION
   if (b2 == color(255,255,255)) 
   {
-    if(dist(400, 170, mouseX, mouseY) <50)
+    if(dist(450, 170, mouseX, mouseY) <50)
     {
     b2 = color(255,255,0);// WHEN CLICKED SET BUTTON TO YELLOW
     print("going to the 4th floor \n");//DISPLAY WHEN BUTTON IS CLICKED
@@ -318,7 +312,7 @@ void mouseClicked() {
   }
   else
   {
-    if (dist(400, 170, mouseX, mouseY) <50)
+    if (dist(450, 170, mouseX, mouseY) <50)
     {
     b2 = color(255,255,255);//SET BUTTON BACK TO WHITE
     print("You are on the 4th floor \n");//DISPLAY WHEN BUTTON IS CLICKED
@@ -327,15 +321,15 @@ void mouseClicked() {
   //FLOOR 3 BUTTON FUNCTION
   if (b3 == color(255,255,255))
   {
-    if(dist(400, 270, mouseX, mouseY) <50)
+    if(dist(450, 270, mouseX, mouseY) <50)
     {
     b3 = color(255,255,0);// WHEN CLICKED SET BUTTON TO YELLOW
-    print("going to the third floor \n");//DISPLAY WHEN BUTTON IS CLICKED
+    print("going to the 3rd floor \n");//DISPLAY WHEN BUTTON IS CLICKED
     }
   } 
   else 
   {
-    if (dist(400, 270, mouseX, mouseY) <50)
+    if (dist(450, 270, mouseX, mouseY) <50)
     {
     b3 = color(255,255,255);//SET BUTTON BACK TO WHITE
     print("You are on the 3rd floor \n");//DISPLAY WHEN BUTTON IS CLICKED
@@ -346,7 +340,7 @@ void mouseClicked() {
  
   if (b4 == color(255,255,255))
   {
-    if(dist(400, 370, mouseX, mouseY) <50)
+    if(dist(450, 370, mouseX, mouseY) <50)
     {
     b4 = color(255,255,0);// WHEN CLICKED SET BUTTON TO YELLOW
     print("going to the 2nd floor \n");//DISPLAY WHEN BUTTON IS CLICKED
@@ -354,7 +348,7 @@ void mouseClicked() {
   } 
   else 
   {
-    if (dist(400, 370, mouseX, mouseY) <50)
+    if (dist(450, 370, mouseX, mouseY) <50)
     {
     b4 = color(255,255,255);//SET BUTTON BACK TO WHITE
     print("You are on the 2nd floor \n");//DISPLAY WHEN BUTTON IS CLICKED
@@ -364,7 +358,7 @@ void mouseClicked() {
   // FLOOR 5 BUTTON FUNCTION
    if (b5 == color(255,255,255))
   {
-    if(dist(400, 470, mouseX, mouseY) <50)
+    if(dist(450, 470, mouseX, mouseY) <50)
     {
     b5 = color(255,255,0);//WHEN CLICKED SET BUTTON TO YELLOW
     print("going to the 1st floor \n");//DISPLAY WHEN BUTTON IS CLICKED
@@ -372,7 +366,7 @@ void mouseClicked() {
   } 
   else 
   {
-    if (dist(400, 470, mouseX, mouseY) <50)
+    if (dist(450, 470, mouseX, mouseY) <50)
     {
     b5 = color(255,255,255);//SET BUTTON BACK TO WHITE
     print("You are on the 1st floor \n");//DISPLAY WHEN BUTTON IS CLICKED 
