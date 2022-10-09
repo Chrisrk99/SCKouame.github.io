@@ -413,7 +413,7 @@ void mouseClicked() {
     {
     b9 = color(255,255,255);//WHEN CLICKED SET BUTTON CALL BACK TO WHITE
     
-    print("Alarm off");//DISPLAY WHEN BUTTON alarm IS CLICKED I the button is yellow
+    print("Alarm off\n");//DISPLAY WHEN BUTTON alarm IS CLICKED I the button is yellow
     }
   }
   
